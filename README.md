@@ -57,7 +57,7 @@ To deploy this project follow these steps:
     * Ansible installation.
 
 ```bash
- bash provision_master.sh
+bash provision_master.sh
 ```
 
 2. Then navigate into **docker** folder and execute the deploy script. This script will perform: 
@@ -66,13 +66,13 @@ To deploy this project follow these steps:
     * Copy of authorized_keys file in /root/.ssh/ path inside each deployed container
 
 ```bash
- bash deploy_containers.sh
+bash deploy_containers.sh
 ```
 
 3. Check and copy containers Ip addresses into inventory.ini file inside ansible folder. To check container ip address, execute this command:
 
 ```bash
- docker inspect <container_name> | grep -i ipaddress
+docker inspect <container_name> | grep -i ipaddress
 ```
 
 Then manually copy the ip address and paste it into inventory.ini, replacing <container-ip> text, here is an example:
@@ -84,13 +84,13 @@ Repeat this process depending on the number of container you've deployed.
 4. Check connectivity between master and nodes, navigate into ansible folder and execute
 
 ```bash
- ansible all -m ping -i inventory.ini
+ansible all -m ping -i inventory.ini
 ```
 
 5. If connection test is successful, execute playbook tasks into every worker node
 
 ```bash
- ansible-playbook -i inventory.ini playbook.yml
+ansible-playbook -i inventory.ini playbook.yml
 ```
 
 For more informations about vagrant commands check [vagrant-cheat-sheet](https://gist.github.com/wpscholar/a49594e2e2b918f4d0c4)
