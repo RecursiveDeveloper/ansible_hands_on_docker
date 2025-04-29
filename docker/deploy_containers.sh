@@ -1,6 +1,6 @@
 #!/bin/bash
 
-image_name="ubuntu_ssh"
+image_name="ubuntu_ssh_demo"
 tag="latest"
 container_names=("ubuntu1" "ubuntu2")
 default_port="8080"
