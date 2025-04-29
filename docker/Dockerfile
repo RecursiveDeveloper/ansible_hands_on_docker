@@ -1,4 +1,4 @@
-FROM ubuntu:jammy-20250404
+FROM ubuntu:jammy
 
 RUN apt update -y && \
     apt install -y openssh-server net-tools nano
